@@ -1,22 +1,17 @@
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const NavDropdown = ({ submenu }) => {
-  console.log(submenu)
   return (
     <>
       <ul className="sub-menu">
-        {
-          submenu.map((item,index)=>{
-            return(
-              <li className="menu-item" key={index}>
-                <NavLink to={item.url}> 
-                  {item.title}
-                </NavLink>
-                </li>
-              
-            )
-          })
-        }
-        
+        {submenu.map((item, index) => {
+          return (
+            <li className="menu-item" key={index}>
+              <NavLink className="menu-link" to={item.url}>
+                {item.title}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
     </>
   );

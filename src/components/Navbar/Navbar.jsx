@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Logo, NavItems, NavDropdown } from "../Navbar";
 import "./Navbar.css";
 const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    let isScrolling = (e) => {
+      window.scrollY > 0 ? setSticky(true) : setSticky(false);
+    };
+    window.addEventListener("scroll", isScrolling);
+    return () => {
+      window.removeEventListener("scroll", isScrolling);
+    };
+  }, []);
+
   return (
     <>
-      <header>
+      <header className={`${sticky ? "sticky" : ""}`}>
         <nav className="container">
-          <div className="row justify-between">
+          <div className="row justify-between align-items-center">
             <div className="col-md-4">
               <Link to="/">
                 <img src={Logo} />
@@ -30,9 +42,9 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-            <div className="col-md-2 text-end">
-              <Link to="/price" className="btn btn-primary">                
-                  <i class="fa-solid fa-arrow-right"></i>
+            <div className="col-md-2 d-flex justify-content-end">
+              <Link to="/price" className="btn btn-primary">
+                <i className="fa-solid fa-arrow-right"></i>
                 Buy now
               </Link>
             </div>

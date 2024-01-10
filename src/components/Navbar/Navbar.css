@@ -52,3 +52,18 @@ transition:var(--transition);
   background:var(--primary-color);
   color:#fff;
 }
+
+header{
+  padding:1.5rem;
+  z-index: 999;
+  transition:all .5s ease;
+}
+
+header.sticky{
+  position:sticky;
+  top:0;
+  left:0;
+  width:100%;
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.15);
+  background:#fff;
+}  

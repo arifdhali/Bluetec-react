@@ -9,11 +9,11 @@ const NavItems = [
     submenu: [
       {
         title: "our teams",
-        url: "/our-teams",
+        url: "/our-team",
       },
       {
-        title: "carrer",
-        url: "/carrer",
+        title: "Career",
+        url: "/career",
       },
     ],
   },
