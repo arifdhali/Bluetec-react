@@ -15,6 +15,7 @@ import {
   About,
   Services,
   Contact,
+  Price,
   Error,
 } from "../src/pages";
 // aos
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/price" element={<Price />} />
           <Route path="*" element={<Error />} />
       </Routes>
         </main>

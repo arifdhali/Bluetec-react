@@ -15,7 +15,7 @@
 }
 #main{
   overflow:hidden;
-  pointer-events:none;
+  /* pointer-events:none; */
 }
 .padding-t{
   padding-top:var(--padding-top);
@@ -507,4 +507,97 @@ footer .search-box i:hover{
 }
 .our-team.about-team .section-top{
   margin-bottom:2rem;
+}
+
+/* CAREER PAGE    */
+.career {
+  position:relative;
+}
+.career:after{
+  position:absolute;
+  top:-10%;
+  right:-0%;
+  width:400px;
+  height:400px;
+   background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(227,229,255,1) 100%);   
+  border-radius:100%;
+  content:"";
+  z-index:-1;
+  pointer-events:none;
+}
+.career .post-header .fa-user-tie{  
+font-size:30px;
+  background:#5d6971;  
+  color:#fff;
+  padding:20px 22px;
+  border-radius:100%;
+}
+.career .post-header h4{
+  margin-bottom:.5rem;
+  font-size:22px;
+}
+.career .post-item{
+  box-shadow:0 0 10px 2px rgba(0,0,0,0.1);
+  padding:2rem;
+  margin-bottom:1rem;
+  border-radius:8px;
+  overflow:hidden;
+  transition: all 1s ease;
+}
+.career .post-header p{
+  margin:0;
+}
+.career .post-header .left{
+  width:80%;
+}
+.career .post-header .right {
+  background:var(--primary-color);
+  color:#fff;
+  border-radius:100%; 
+cursor:pointer;
+
+}
+.career .post-header .right i{
+  font-size:20px;
+  font-weight:bold;
+  width:35px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.career .post-content {
+  min-height: 1px;
+  height: 0;  
+  visibility: hidden;
+}
+
+.career .post-content.show{
+  height:auto; 
+  visibility:visible;  
+  padding-block-start:1rem;
+}
+.career .post-content li,.career .post-content p{
+  font-size:16px;
+  font-weight:400;
+  color:rgb(132, 146, 166);  
+}
+.career .post-content .post-requirment{
+  padding:1rem 1.5rem;
+  background:#f3f3f3;
+  border-radius:8px;
+}
+
+.career .post-content .post-requirment li{
+  display:flex;
+  align-items:flex-start;
+  margin-bottom:5px;
+}
+.career .post-content .post-requirment li i{
+  margin:4px 8px 0 0;
+    color:orange;
+}
+.career .post-content .post-requirment.benefits li i{
+  color:#00c100;
 }

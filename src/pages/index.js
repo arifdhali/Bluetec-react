@@ -5,6 +5,7 @@ export { default as Services } from "../pages/Services";
 export { default as Contact } from "../pages/Contact";
 export { default as OurTeam } from "../pages/OurTeam";
 export { default as Career } from "../pages/Career";
+export { default as Price } from "../pages/Price";
 
 export { default as Error } from "../pages/Error";
 
@@ -12,6 +13,7 @@ export { default as Error } from "../pages/Error";
 export {default as ServiceList} from "../components/Services/Service-list";
 export {default as TestimonialsList} from "../components/Testimonials/TestimonialsList";
 export {default as OurTeams} from "../components/OurTeams/OurTeams";
+export {default as CareerPosts} from "../components/CareerPosts/CareerPosts";
 
 // Hero section
 export {default as Hero} from "../components/Hero/Hero";

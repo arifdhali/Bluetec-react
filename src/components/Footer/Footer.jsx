@@ -6,11 +6,13 @@ const Footer = () => {
       <aside className="subscribe">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-md-6">
+            <div className="col-md-6"   data-aos="fade-down"
+              data-aos-duration="1000">
               <h3>Awesomeness begin here. Are you ready?</h3>
             </div>
-            <div className="col-auto">
-             <Link to="/our-team" className="btn btn-primary">let's do it</Link>
+            <div className="col-auto"   data-aos="fade-down"
+              data-aos-duration="1000">
+             <Link to="/career" className="btn btn-primary">let's do it</Link>
             </div>
           </div>
         </div>

@@ -1,9 +1,16 @@
-import { Hero} from "../pages/index";
+import { Hero, CareerPosts } from "../pages/index";
 const Career = () => {
   return (
     <>
       <Hero pageName="Careers" subPara="Awsome Page Teaser Here" />
-      <h1>Carrer</h1>
+
+      <section className="career padding-b padding-t">
+      <div className="container w-50">
+        <CareerPosts />
+        <CareerPosts />
+        <CareerPosts />
+      </div>
+      </section>
     </>
   );
 };
