@@ -1,22 +1,85 @@
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Logo, NavItems } from "../Navbar";
 const Footer = () => {
+  let location = useLocation();
+  const [isHomepage, setIsHomepage] = useState(false);  
+  useEffect(() => {
+    setIsHomepage(location.pathname === "/");    
+  }, [location.pathname]);
+
+  
+
   return (
     <>
-      <aside className="subscribe">
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-md-6"   data-aos="fade-down"
-              data-aos-duration="1000">
-              <h3>Awesomeness begin here. Are you ready?</h3>
-            </div>
-            <div className="col-auto"   data-aos="fade-down"
-              data-aos-duration="1000">
-             <Link to="/career" className="btn btn-primary">let's do it</Link>
+      {isHomepage ? (
+        <aside className="compny-achivement">
+          <div className="container">
+            <div className="row text-center">
+              <div
+                className="col-md-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="300"
+              >
+                <strong>15425</strong>
+                <p> Website Powered </p>
+              </div>
+              <div
+                className="col-md-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="400"
+              >
+                <strong>8745</strong>
+                <p> Clients Supported </p>
+              </div>
+              <div
+                className="col-md-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="500"
+              >
+                <strong>235</strong>
+                <p> Awards Winning </p>
+              </div>
+              <div
+                className="col-md-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="600"
+              >
+                <strong>15</strong>
+                <p> Years Experience </p>
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      ) : (
+        <aside className="subscribe">
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              <div
+                className="col-md-6"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <h3>Awesomeness begin here. Are you ready?</h3>
+              </div>
+              <div
+                className="col-auto"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <Link to="/career" className="btn btn-primary">
+                  let's do it
+                </Link>
+              </div>
+            </div>
+          </div>
+        </aside>
+      )}
+
       <footer className="padding-t">
         <div className="container">
           <div className="row">

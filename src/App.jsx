@@ -1,11 +1,14 @@
 // App.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 // router
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// all nav items
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
 // all pages
 import {
   Home,
@@ -17,6 +20,8 @@ import {
   Contact,
   Price,
   Error,
+  Navbar,
+  Footer,
 } from "../src/pages";
 // aos
 import AOS from "aos";
@@ -30,8 +35,8 @@ export default function App() {
   return (
     <Router>
       <Navbar />
-        <main id="main">
-      <Routes>
+      <main id="main">
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
           <Route path="/our-team" element={<OurTeam />} />
@@ -41,8 +46,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/price" element={<Price />} />
           <Route path="*" element={<Error />} />
-      </Routes>
-        </main>
+        </Routes>
+      </main>
       <Footer />
     </Router>
   );

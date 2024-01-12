@@ -16,10 +16,15 @@ nav .menu-item:hover > a,
 .menu-item.dropdown{
   position:relative;
 }
+
+
 .menu-item.dropdown:hover .sub-menu{
   transform:translateY(20px);
   visibility:visible;
   opacity:1;
+}
+.menu-link.active dropdown > a{
+  color:red !important;
 }
 .menu-item.dropdown .sub-menu{
   position:absolute;

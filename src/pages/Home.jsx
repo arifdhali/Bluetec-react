@@ -62,13 +62,13 @@ const Home = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua ut
                 enim.
               </p>
-              <a
+              <Link to="/about"
                 data-aos="fade-left"
                 className="btn btn-primary"
                 data-aos-duration="1600"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
 
             <div className="col-md-6 ">

@@ -4,6 +4,7 @@
   margin:0;
   padding:0;
 }
+
 :root{
   --primary-color:#017dfc;
   --secondary-color:#222;
@@ -63,7 +64,7 @@ p{
   font-size:16px;  
 }
 
-body{
+body,label{
   font-family: 'Nunito', sans-serif;
 }
 ul{
@@ -108,7 +109,8 @@ nav .btn-primary{
 }
     /* HOME PAGE START    */
 .banner-area.homepage{
-  position:relative;    
+  position:relative;  
+  pointer-events:none;
 
 }
 .banner-area.homepage::after{
@@ -600,4 +602,148 @@ cursor:pointer;
 }
 .career .post-content .post-requirment.benefits li i{
   color:#00c100;
+}
+
+
+/* PRICE PAGE  */
+
+.pricing-dtls{
+  box-shadow:0 0 15px 2px rgba(0,0,0,0.05);
+  padding-top:2rem;
+  border-radius:8px;
+}
+.pricing-plan-name{
+  padding-bottom:2rem;
+}
+.pricing-plan-name h3,.pricing-plan-name p{
+  text-align:center;
+  margin:0;
+}
+.pricing-top h3{
+  color:var(--primary-color);
+  font-size:35px;
+}
+.pricing-top p{
+  font-size:18px;
+  font-weight:500;
+}
+.plan-features{
+  padding:2rem 1.5rem;
+  border-bottom:1px solid #e8e8e8;
+}
+.plan-features ul li{
+  margin-bottom:10px;
+}
+.plan-features ul li i{
+   color:#00c100;
+  margin:4px 8px 0 0;
+}
+.price-tag{
+  padding:1.5rem;
+  background:var(--primary-color);
+  text-align:center;
+  color:#fff;
+}
+.price-tag span{
+  font-size:50px;
+  margin:0 5px;
+}
+.price-tag sub,.price-tag sup{
+  font-size:18px;
+}
+.pricing-bottom{
+  padding:1.5rem;
+  display: flex;
+  justify-content: center;
+  background:#fcfcfc;
+}
+
+
+/* compny-achivement home page footer aside */
+.compny-achivement{
+  background:#342a6d;
+  padding:4rem;
+}
+.compny-achivement strong{
+  font-size:40px;    
+  line-height:1.3;  
+}
+.compny-achivement strong,.compny-achivement p{
+  color:#fff;
+  margin:0;
+  text-transform:uppercase;
+} 
+
+/* Contact page  */
+.contact-us{
+  position:relative;
+}
+.contact-us::before{
+  position:absolute;
+  top:0%;
+  right:-10%;
+  width:1000px;
+  height:1000px;
+   background: rgb(255,255,255);
+  background: linear-gradient(30deg,  rgba(227,229,255,1)  0%, rgba(255,255,255,1) 100%);   
+  border-radius:100%;
+  content:"";
+  z-index:-1;
+  pointer-events:none;
+
+}
+.contact-cntnr{
+  max-width:770px;
+  margin:auto;
+}
+.form textarea, .form input:not([type="submit"]) {
+  width: 100%;
+  border: 1px solid #dadada;
+  padding: 10px;
+  height: 50px;
+  border-radius: 4px;
+  background:transparent;
+}
+
+.form input:focus,.form textarea:focus{
+  outline:0;
+
+}
+.form .form-field textarea{  
+  height:150px;
+  resize:none;
+}
+.form .form-field label{
+  display:block;
+  font-weight:600;
+  color:rgb(65, 72, 83);
+  margin-bottom:4px;
+}
+.form .form-field small{
+  color:red;
+  line-height:1;
+  visibility:hidden;
+}
+.info-list{
+  background:#292ba0;
+  padding:2rem;
+  border-radius:8px;
+}
+.au-office{
+  background:#342a6d;
+}
+.info-list address{
+  margin:0;
+}
+.info-list h3,.info-list p,.info-list span{
+  display:block;
+  color:#fff;
+}
+.info-list span {
+  margin-bottom:8px;
+}
+.info-list span i{
+  font-weight:600;
+  margin-right:5px;
+  font-size:16px;
 }

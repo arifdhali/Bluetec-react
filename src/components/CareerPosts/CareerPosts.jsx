@@ -4,10 +4,8 @@ const CareerPost = () => {
 const [open, setOpen] = useState(false);
 const handelAccordion = ()=>{
   setOpen(!open);
-}
-  console.log(open);
+}  
 
-  
   return (
     <>
       <div className="post-item">
