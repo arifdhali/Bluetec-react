@@ -14,10 +14,7 @@
   --padding-top:80px;
   --padding-bottom:80px;
 }
-#main{
-  overflow:hidden;
-  /* pointer-events:none; */
-}
+
 .padding-t{
   padding-top:var(--padding-top);
 }
@@ -64,8 +61,9 @@ p{
   font-size:16px;  
 }
 
-body,label{
+body{
   font-family: 'Nunito', sans-serif;
+  overflow-x:hidden;
 }
 ul{
   padding-left:0;

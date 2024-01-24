@@ -7,6 +7,7 @@ import {
   Routes,
   Route,
   useLocation,
+  useNavigate
 } from "react-router-dom";
 
 // all pages
@@ -26,6 +27,17 @@ import {
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+function ScrollToTop() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    navigate(location.pathname, { replace: true });
+    window.scrollTo(0, 0);
+  }, [location.pathname, navigate]);
+
+  return null; 
+}
 
 export default function App() {
   useEffect(() => {
@@ -36,6 +48,7 @@ export default function App() {
     <Router>
       <Navbar />
       <main id="main">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />

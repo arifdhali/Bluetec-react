@@ -60,7 +60,7 @@ transition:var(--transition);
 
 header{
   padding:1.5rem;
-  z-index: 999;
+
   transition:all .5s ease;
 }
 
@@ -71,4 +71,5 @@ header.sticky{
   width:100%;
   box-shadow:0 0 10px 1px rgba(0,0,0,0.15);
   background:#fff;
+  z-index: 999;
 }  
